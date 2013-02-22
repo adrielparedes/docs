@@ -1,0 +1,162 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[11pt,4apaper]{article}
+\usepackage[a4paper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+% \usepackage{mdwlist}
+% \usepackage[T1]{fontenc}
+% \usepackage{textcomp}
+% \usepackage{tgpagella}
+% \pagestyle{empty}
+% \setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+    {\setlength{\leftmargin}{#1}}%
+    \item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+    {\setlength{\leftmargin}{-0.5#1}}%
+    \item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+#1 &
+#2 \\
+    \end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+\begin{titlepage}
+\vspace*{\fill}
+\begin{center}
+\Huge{Curriculum Vitae}
+\end{center}
+\vspace*{\fill}
+\end{titlepage}
+\newpage
+
+
+\begin{center}
+{\LARGE \textbf{Información Personal}}
+\end{center}
+\hrule
+\vspace{-0.4em}
+
+\begin{description}
+\item [Apellido y Nombre:] Paredes, Adriel Rubén 
+\item [Fecha de Nacimiento:] 15 de Octubre de 1988
+\item [Lugar de Nacimiento:] San Martín - Provincia de Buenos Aires
+\item [D.N.I.:] 34 154 089
+\item [Dirección:] Echagüe 1590, José León Suárez, San Martín,
+    Provincia de Buenos Aires
+    \item [Teléfono:] 4729-3535
+    \item [Celular:] 15-5567-0211
+    \item [e-mail:] adriel.paredes@gmail.com
+    \end{description}
+
+
+
+
+    \begin{center}
+{\LARGE \textbf{Detalles}}
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+
+\subsection*{Experiencia}
+
+\begin{itemize}
+\parskip=0.1em
+
+\item
+\headerrow
+{\textbf{ODEA S.R.L, Oil Software}}
+{\textbf{CABA, Buenos Aires}}
+\\
+        \headerrow
+{\emph{Desarrollo de Software}}
+{\emph{2010 -- 2011}}
+\begin{itemize}
+\item Desarrollo de Software propietario para el despacho y facturación de
+    Gas Natural para las empresas YPF, Metrogas y Panamerican Energy
+\item Capacitado sobre Unified Modeling Language (UML)
+    \end{itemize}
+
+    \end{itemize}
+
+    \hrule
+    \vspace{-0.4em}
+    \subsection*{Educación}
+
+    \begin{itemize}
+    \parskip=0.1em
+
+    \item 
+    \headerrow
+{\textbf{Universidad Tecnológica Nacional}}
+{\textbf{CABA, Buenos Aires}}
+\\
+        \headerrow
+{\emph{Facultad Regional Buenos Aires, Ingeniería en
+    Sistemas de Información}} 
+{\emph{2007 -- 2011}}
+\begin{itemize}
+\item Cursando el último año de la carrera (5to año)
+    \end{itemize}
+
+
+    \item 
+    \headerrow
+{\textbf{Instituto Dr. Juán Segundo Fernandez}}
+{\textbf{San Isidro, Buenos Aires}}
+\\
+        \headerrow
+{\emph{Don Bosco, Técnico en equipos e instalaciones electromecánicas}} 
+
+\begin{itemize}
+\item Participación en el equipo de robótica
+\end{itemize}
+
+\item 
+\headerrow
+{\textbf{ABC English}}
+{\textbf{Villa Ballester, Buenos Aires}}
+\\
+        \headerrow
+{\emph{Instituto de lengua extranjera, First Certificate in English Student}}
+
+
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Habilidades Técnicas}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description}
+\item[Languajes:]
+C, \CPP, Vala, Java, Wicket, C{\#}, \LaTeX, Ruby, Python, shell script, SQL,
+    PL-SQL, Haskell, Prolog, Smalltalk, UML
+    \end{description}
+    \end{indentsection}
+
+    \end{document}
+
